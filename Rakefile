@@ -16,6 +16,11 @@ task "db:drop" do
   rm_f 'db/db.sqlite3'
 end
 
+desc "populate the test database with sample data"
+task "db:populate" do
+  ImageImporter.new.import
+end
+
 desc 'Retrieves the current schema version number'
 task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"

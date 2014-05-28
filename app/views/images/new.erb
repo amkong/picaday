@@ -1,0 +1,27 @@
+<h1>Add an image</h1>
+<hr/>
+
+<% if @image && @image.errors.any? %>
+  <div>
+    <strong>There were some issues with the information you supplied, please fix them:</strong>
+    <ul>
+      <% @image.errors.full_messages.each do |image| %>
+        <li><%= image %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<form method="post" action="/images">
+  <div>
+    <label>Url</label>
+    <input type="text" name="url" value="<%= @image && @image.url %>">
+  </div>
+  <div>
+    <label>Title</label>
+    <input type="text" name="title" value="<%= @image && @image.title %>">
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
