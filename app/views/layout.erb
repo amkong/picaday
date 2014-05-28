@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="/javascript/modernizr.custom.70736.js"></script>
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -11,13 +12,26 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/stylesheets/application.css">
+  <link rel="stylesheet" href="/stylesheets/demo.css">
+  <link rel="stylesheet" href="/stylesheets/noJS.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/javascript/application.js"></script>
 
   <title></title>
 </head>
 <body>
   <%= yield %>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascript/application.js"></script>
+  <script src="/javascript/gamma.js"></script>
+  <script src="/javascript/jquery.history.js"></script>
+  <script src="/javascript/jquery.masonry.min.js"></script>
+  <script src="/javascript/jquerypp.custom.js"></script>
+  <script src="/javascript/js-url.min.js"></script>
+
 </body>
+
+
+
 </html>
