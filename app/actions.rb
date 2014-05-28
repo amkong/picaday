@@ -32,3 +32,26 @@ get '/images/:id' do
 
   erb :'images/show'
 end
+
+get '/challenges' do
+  @challenges = Challenge.all
+end
+
+get '/challenges/today' do
+  @challenge = Challenge.today
+end
+
+get '/challenges/yesterday' do
+  @challenge = Challenge.yesterday
+end
+
+get '/challenges/:id'
+  @challenge = Challenge.find(params[:id])
+end
+
+get '/challenges/new' do
+  @challenge = Challenge.new
+end
+
+
+
