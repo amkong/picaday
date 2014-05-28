@@ -13,3 +13,22 @@ get '/images/new' do
 
   erb :'images/new'
 end
+
+post '/images' do
+  @image = Image.new(
+    url: params[:url],
+    title: params[:title]
+  )
+
+  if @image.save
+    redirect "/images/#{@image.id}"
+  else
+    erb :'images/new'
+  end
+end
+
+get '/images/:id' do
+  @image = Image.find(params[:id])
+
+  erb :'images/show'
+end
