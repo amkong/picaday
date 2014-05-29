@@ -18,7 +18,8 @@ end
 
 desc "populate the test database with sample data"
 task "db:populate" do
-  ImageImporter.new.import
+  # ImageImporter.new.import
+  ChallengeImporter.new.import
 end
 
 desc 'Retrieves the current schema version number'

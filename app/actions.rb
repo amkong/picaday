@@ -35,17 +35,21 @@ end
 
 get '/challenges' do
   @challenges = Challenge.all
+
+  erb :'challenges/index'
 end
 
 get '/challenges/today' do
   @challenge = Challenge.today
+
+  erb :'challenges/today'
 end
 
 get '/challenges/yesterday' do
   @challenge = Challenge.yesterday
 end
 
-get '/challenges/:id'
+get '/challenges/:id' do
   @challenge = Challenge.find(params[:id])
 end
 
