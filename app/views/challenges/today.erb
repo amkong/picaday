@@ -30,7 +30,7 @@
       </header>
 
     <!-- Banner -->   
-      <section class= "banner" id="banner">
+      <section id="banner02">
         
         <!--
           ".inner" is set up as an inline-block so it automatically expands
@@ -43,10 +43,12 @@
           <header>
             <h2>TODAY</h2>
           </header>
+          <p>This is your<br />
+          <strong>challenge:</strong><br /></p>
           <div class="challenge-list-item">
               <a href="/challenges/<%=@challenge.id%>">
             <div class="challenge-list-item">
-              <h3><%=@challenge.name%></h3>
+              <h3><strong><%=@challenge.name%></strong></h3>
               <date><%=@challenge.date.to_s%></date>
             </div>
              </a>
@@ -57,35 +59,21 @@
               <li><a href="/images" class="button fit scrolly">Photos</a></li>
             </ul>
           </footer>
+          </div>
 
-        <section class="banner" id="banner">
-        
-        <!--
-          ".inner" is set up as an inline-block so it automatically expands
-          in both directions to fit whatever's inside it. This means it won't
-          automatically wrap lines, so be sure to use line breaks where
-          appropriate (<br />).
-        -->
-        <div class="inner">
+          <div class="inner float-right">
           
           <header>
-            <h2>TODAY</h2>
+            <h2>SUBMIT</h2>
           </header>
-          <div class="challenge-list-item">
-              <a href="/challenges/<%=@challenge.id%>">
-            <div class="challenge-list-item">
-              <h3><%=@challenge.name%></h3>
-              <date><%=@challenge.date.to_s%></date>
-            </div>
-             </a>
-            </div>
+          <p>This is your<br />
+          <strong>challenge:</strong><br /></p>
           
           <footer>
             <ul class="buttons vertical">
-              <li><a href="/images" class="button fit scrolly">Photos</a></li>
+              <li><a href="/images" class="button fit scrolly">Submit</a></li>
             </ul>
           </footer>
-        
-        </div>
+          </div>
         
       </section>
