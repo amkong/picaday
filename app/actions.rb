@@ -42,7 +42,8 @@ end
 get '/challenges/today' do
   @challenge = Challenge.today
 
-  erb :'challenges/today'
+  erb :'challenges/today', 
+  layout: :'layouts/theme'
 end
 
 get '/challenges/yesterday' do
@@ -57,5 +58,6 @@ get '/challenges/new' do
   @challenge = Challenge.new
 end
 
-
-
+def erb_special(template, layout, options={})
+  erb template, options.merge(:layout => layout)
+end
