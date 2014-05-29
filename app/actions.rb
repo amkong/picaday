@@ -62,6 +62,9 @@ end
 
 get '/challenges/yesterday' do
   @challenge = Challenge.yesterday
+  @images = @challenge.images
+
+  erb :'challenges/show'
 end
 
 get '/challenges/new' do
@@ -72,6 +75,9 @@ end
 get '/challenges/:year/:month/:day' do
   @challenge = Challenge.find_by(date: Date.parse("#{params[:year]}-#{params[:month]}-#{params[:day]}"))
   @images = @challenge.images
+  @images = @images.sort do |a,b|
+     b.votes.size <=> a.votes.size
+  end
   erb :'challenges/show'
 end
 
