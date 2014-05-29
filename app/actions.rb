@@ -90,6 +90,7 @@ end
 
 not_found do
   erb :'system/404'
+end
 
 def erb_special(template, layout, options={})
   erb template, options.merge(:layout => layout)
