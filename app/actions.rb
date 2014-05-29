@@ -49,13 +49,20 @@ get '/challenges/yesterday' do
   @challenge = Challenge.yesterday
 end
 
+get '/challenges/new' do
+  @challenge = Challenge.new
+end
+
+get '/challenges/:year/:month/:day' do
+  @challenge = Challenge.find_by(date: Date.parse("#{params[:year]}-#{params[:month]}-#{params[:day]}"))
+  erb :'challenges/show'
+end
+
 get '/challenges/:id' do
   @challenge = Challenge.find(params[:id])
 end
 
-get '/challenges/new' do
-  @challenge = Challenge.new
-end
+
 
 
 
