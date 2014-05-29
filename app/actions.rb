@@ -15,9 +15,12 @@ get '/images/new' do
 end
 
 post '/images' do
+  current_challenge
+
   @image = Image.new(
     url: params[:url],
-    title: params[:title]
+    title: params[:title],
+    challenge_id: @current_challenge.id
   )
 
   if @image.save
@@ -51,18 +54,27 @@ end
 
 get '/challenges/new' do
   @challenge = Challenge.new
+  erb :'challenges/new', layout: :'layouts/global'
 end
 
 get '/challenges/:year/:month/:day' do
   @challenge = Challenge.find_by(date: Date.parse("#{params[:year]}-#{params[:month]}-#{params[:day]}"))
+  @images = @challenge.images
   erb :'challenges/show'
 end
 
 get '/challenges/:id' do
   @challenge = Challenge.find(params[:id])
+  @images = @challenge.images
+  erb :'challenges/show'
 end
 
+helpers do
+  def current_challenge
+    @current_challenge = Challenge.today
+  end
+end
 
-
-
-
+not_found do
+  erb :'system/404'
+end
