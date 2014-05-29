@@ -16,8 +16,30 @@ $(document).ready(function() {
   }
 
   $('.center-of-screen').center();
+
+  init_up_vote();
   
 });
 
 
+$(document).keydown(function(e){
+    if (e.keyCode == 38 && $('.gamma-single-view').css('display') != 'none' ) { 
+      id = $('.gamma-single-view img').attr("src").split("#")[1]
+      console.log(id);
+      address = "/images/" + id + "/upvote"
+      //Upvote image
+      $.post(address, function( data ) {
+        console.log(data);
+      });
+    }
+});
 
+function init_up_vote(){
+  $('.ajax-up-vote').click(function(e) {
+      e.preventDefault();
+      var address = $(this).attr("href");
+      $.post(address, function( data ) {
+        console.log(data);
+      });
+  });
+}

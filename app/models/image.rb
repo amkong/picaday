@@ -1,5 +1,6 @@
 class Image < ActiveRecord::Base
   belongs_to :challenge
+  has_many :votes
 
   validates :url, presence: true
   validate :valid_uri

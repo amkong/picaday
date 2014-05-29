@@ -36,6 +36,18 @@ get '/images/:id' do
   erb :'images/show'
 end
 
+post '/images/:id/upvote' do
+  @image = Image.find(params[:id])
+
+  @vote = Vote.new(image_id: params[:id])
+
+  if @vote.save
+    #blah
+  end
+
+  erb :'images/show'
+end
+
 get '/challenges' do
   @challenges = Challenge.all
 
