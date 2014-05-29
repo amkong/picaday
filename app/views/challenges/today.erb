@@ -1,5 +1,79 @@
-<header class="special container">
-  <span class="icon fa-tablet"></span>
-  <h2><%=@challenge.name%></h2>
-  <p>What are you waiting for? Get to it!</p>
-</header>
+
+    <!-- Header -->
+      <header id="header" class="alt">
+        <h1 id="logo"><a href="http://www.lighthouselabs.ca/">PICADAY <span>by Lighthouse Labs</span></a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="current"><a href="/images">Welcome</a></li>
+            <li class="submenu">
+              
+              <ul>
+                <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                <li><a href="no-sidebar.html">No Sidebar</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="submenu">
+                  <a href="">Submenu</a>
+                  <ul>
+                    <li><a href="#">Dolore Sed</a></li>
+                    <li><a href="#">Consequat</a></li>
+                    <li><a href="#">Lorem Magna</a></li>
+                    <li><a href="#">Sed Magna</a></li>
+                    <li><a href="#">Ipsum Nisl</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#" class="button special">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Banner -->   
+      <section id="banner02">
+        
+        <!--
+          ".inner" is set up as an inline-block so it automatically expands
+          in both directions to fit whatever's inside it. This means it won't
+          automatically wrap lines, so be sure to use line breaks where
+          appropriate (<br />).
+        -->
+        <div class="inner">
+          
+          <header>
+            <h2>TODAY</h2>
+          </header>
+          <p>This is your<br />
+          <strong>challenge:</strong><br /></p>
+          <div class="challenge-list-item">
+              <a href="/challenges/<%=@challenge.id%>">
+            <div class="challenge-list-item">
+              <h3><strong><%=@challenge.name%></strong></h3>
+              <date><%=@challenge.date.to_s%></date>
+            </div>
+             </a>
+            </div>
+          
+          <footer>
+            <ul class="buttons vertical">
+              <li><a href="/images" class="button fit scrolly">Photos</a></li>
+            </ul>
+          </footer>
+          </div>
+
+          <div class="inner float-right">
+          
+          <header>
+            <h2>SUBMIT</h2>
+          </header>
+          <p>This is your<br />
+          <strong>challenge:</strong><br /></p>
+          
+          <footer>
+            <ul class="buttons vertical">
+              <li><a href="/images" class="button fit scrolly">Submit</a></li>
+            </ul>
+          </footer>
+          </div>
+        
+      </section>
