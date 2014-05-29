@@ -5,7 +5,7 @@ end
 
 get '/images' do
   @images = Image.all
-  erb :'images/index'
+  erb :'images/index', layout: :'layouts/gallery'
 end
 
 get '/images/new' do

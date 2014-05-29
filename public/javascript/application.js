@@ -34,6 +34,13 @@ $(document).keydown(function(e){
     }
 });
 
+function upvote_animation(){
+   $('#upvote').show();
+   setTimeout(function() { 
+       $('#upvote').fadeOut(); 
+   }, 5000);
+}
+
 function init_up_vote(){
   $('.ajax-up-vote').click(function(e) {
       e.preventDefault();
