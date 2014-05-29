@@ -7,8 +7,6 @@ class Challenge < ActiveRecord::Base
   end
 
   def self.today
-    # where( date: (Time.now.beginning_of_day..Time.now.end_of_day)).take
-    # where( date: (Time.now.beginning_of_day..Time.now.end_of_day)).take
     find_by(date: Date.today.to_s)
   end
 end

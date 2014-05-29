@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528193912) do
+ActiveRecord::Schema.define(version: 20140529012852) do
 
   create_table "challenges", force: true do |t|
     t.string   "name"
@@ -24,11 +24,7 @@ ActiveRecord::Schema.define(version: 20140528193912) do
     t.integer "image_id",     null: false
   end
 
-  create_table "images", force: true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "images" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end
