@@ -13,6 +13,14 @@
   font-style: normal;
 }
 
+/*.background-color-grey {
+	background-image: url("../images/dark-tl.svg"), url("../images/dark-tr.svg"), url("../images/dark-bl.svg"), url("../images/dark-br.svg");
+}*/
+
+.background-color-grey {
+	background-color: #f3f6fa;
+}
+
 /* Gamma Gallery Style */
 
 .gamma-container {
