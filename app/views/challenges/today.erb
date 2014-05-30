@@ -1,7 +1,7 @@
 
     <!-- Header -->
       <header id="header" class="alt">
-        <h1 id="logo"><a href="http://www.lighthouselabs.ca/">PICADAY <span>by Lighthouse Labs</span></a></h1>
+        <h1 id="logo"><a href="../">PICADAY</a></h1>
         <nav id="nav">
           <ul>
             <li class="current"><a href="/images">Welcome</a></li>
@@ -66,8 +66,17 @@
           <header>
             <h2>SUBMIT</h2>
           </header>
-          <p>This is your<br />
-          <strong>challenge:</strong><br /></p>
+            
+            <form method="post" action="/images">
+                <div>
+
+                  <input type="text" name="url" placeholder="url" value="<%= @image && @image.url %>">
+                </div>
+                <div>
+
+                  <input type="text" name="title" placeholder="title" value="<%= @image && @image.title %>">
+                </div>
+            </form>
           
           <footer>
             <ul class="buttons vertical">

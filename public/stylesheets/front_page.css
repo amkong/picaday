@@ -225,6 +225,7 @@
 	input[type="password"],
 	input[type="email"] {
 		line-height: 1em;
+		margin-bottom: 1em;
 	}
 
 	::-webkit-input-placeholder {
@@ -690,17 +691,12 @@
 			-o-animation: none;
 			-ms-animation: none;
 			animation: none;
-			background: transparent;
+			background: rgba(0, 0, 0, 0.6);
 			box-shadow: none;
 			color: white;
-			padding: 2em 2.5em;
-			/*position: absolute;*/
+			padding: 1em 2.5em;
 		}
 
-			/*#header.alt nav {
-				right: 2.5em;
-				top: 1.75em;
-			}*/
 
 				#header.alt nav ul li.active > a, #header.alt nav ul li:hover > a {
 					border: solid 1px;
@@ -789,7 +785,7 @@
 			-o-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: rgba(10, 8, 9, 0.7);
+			background: rgba(10, 8, 9, 0.6);
 			color: white;
 			display: inline-block;
 			opacity: 0;
@@ -859,8 +855,8 @@
 			display: inline-block;
 			opacity: 0;
 			padding: 3em;
-			text-align: center;
 			float: left;
+			text-align: center;
 		}
 
 		#banner02 .inner.float-right {
@@ -879,11 +875,11 @@
 			display: inline-block;
 			opacity: 0;
 			padding: 3em;
-			text-align: center;
 			float: left;
 			margin-left: 7em;
 			width: 600px;
-			height: 475px;
+			height: 600px;
+			text-align: left;
 		}
 
 		#banner02 .inner header {
