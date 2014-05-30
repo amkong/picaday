@@ -98,6 +98,25 @@ not_found do
   erb :'system/404'
 end
 
-def erb_special(template, layout, options={})
-  erb template, options.merge(:layout => layout)
+# Warden routes
+
+# when user reach a protected route watched by Warden calls
+post '/auth/unauthenticated' do
+  session[:return_to] = env['warden.options'][:attempted_path]
+  puts env['warden.options'][:attempted_path]
+  flash[:error] = env['warden'].message  || 'You must to login to continue'
+  redirect '/auth/login'
+end
+
+# to ensure user logout a session data removal
+get '/auth/logout' do
+  env['warden'].raw_session.inspect
+  env['warden'].logout
+  flash[:success] = "Successfully logged out"
+  redirect '/'
+end
+
+get '/protected' do
+  env['warden'].authenticate!
+  erb :'auth/protected'
 end

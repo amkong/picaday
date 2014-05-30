@@ -1,0 +1,21 @@
+<section class="wrapper style4 special container small center-of-screen">
+          
+<!-- Content -->
+  <div class="content">
+
+    <form method="post" action="/images">
+      <div class="row half no-collapse-1 margin-bottom-1">
+        <div class="6u">
+          <label class="visuallyhidden" for="url">Email</label>
+          <input type="text" name="url" placeholder="Email" value="<%= @user && @user.email %>">
+        </div>
+        <div class="6u">
+          <label class="visuallyhidden" for="title">Password</label>
+          <input type="text" name="title" placeholder="Password">
+        </div>
+      </div>
+      <input type="submit" value="Login" class="button special">
+    </form>
+  </div>
+
+</section>
