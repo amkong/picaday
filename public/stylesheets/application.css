@@ -29,3 +29,11 @@
 .float-right {
   float: right;
 }
+
+.background-color-1 {
+  background-color: rgba(45, 231, 135, 0.9);
+}
+
+.button.special.background-color-1 {
+  background-color: rgba(45, 231, 135, 0.9);
+}
