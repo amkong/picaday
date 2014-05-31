@@ -138,7 +138,7 @@ post '/auth/unauthenticated' do
 end
 
 # to ensure user logout a session data removal
-get '/auth/logout' do
+get '/logout' do
   env['warden'].raw_session.inspect
   env['warden'].logout
   flash[:success] = "Successfully logged out"

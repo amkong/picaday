@@ -11,6 +11,9 @@ require 'warden'
 require 'bcrypt'
 require 'pry'
 
+require 'dotenv'
+Dotenv.load
+
 require_relative '../lib/image_importer'
 require_relative '../lib/challenge_importer'
 
