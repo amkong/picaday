@@ -88,13 +88,20 @@ get '/challenges/:id' do
   erb :'challenges/show'
 end
 
+get '/login' do
+  @user = User.new
+
+  erb :'auth/login'
+end
 post '/login' do
   @user = User.authenticate(params[:email], params[:password])
 
   if @user
-    #set session
+    # set session
+    # redirect to homepage
+    redirect '/'
   else
-    render :'auth/login'
+    erb :'auth/login'
   end
 end
 

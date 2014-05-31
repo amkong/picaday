@@ -1,3 +1,14 @@
+<% if flash[:err] %>
+  <h3 class="err"><%= flash[:err] %></h3>
+<% end %>
+
+<% if flash[:ok] %>
+  <h3 class="ok"><%= flash[:ok] %></h3>
+<% end %>
+
+<% [:notice, :error, :success].each do |name| %>
+
+<% end %>
 <!-- Header -->
 <header id="header" class="alt">
   <nav id="nav" class="float-left">

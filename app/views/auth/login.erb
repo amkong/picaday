@@ -3,15 +3,15 @@
 <!-- Content -->
   <div class="content">
 
-    <form method="post" action="/images">
+    <form method="post" action="/login">
       <div class="row half no-collapse-1 margin-bottom-1">
         <div class="6u">
-          <label class="visuallyhidden" for="url">Email</label>
-          <input type="text" name="url" placeholder="Email" value="<%= @user && @user.email %>">
+          <label class="visuallyhidden" for="email">Email</label>
+          <input name="email" type="email" placeholder="Email">
         </div>
         <div class="6u">
-          <label class="visuallyhidden" for="title">Password</label>
-          <input type="text" name="title" placeholder="Password">
+          <label class="visuallyhidden" for="password">Password</label>
+          <input type="password" name="password" placeholder="Password">
         </div>
       </div>
       <input type="submit" value="Login" class="button special">
