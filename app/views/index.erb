@@ -1,25 +1,16 @@
-<% if flash[:err] %>
-  <h3 class="err"><%= flash[:err] %></h3>
-<% end %>
-
-<% if flash[:ok] %>
-  <h3 class="ok"><%= flash[:ok] %></h3>
-<% end %>
-
-<% [:notice, :error, :success].each do |name| %>
-
-<% end %>
 <!-- Header -->
 <header id="header" class="alt">
-  <nav id="nav" class="float-left">
+  <nav id="nav" class="float-left clearfix">
     <ul>
       <li class="current"><a href="/">Picaday</a></li>
-      <li><a href="#" class="button special">Sign up</a></li>
+      <%if @current_user.nil? %>
+        <li><a href="#" class="button special">Sign up</a></li>
+      <% end %>
     </ul>
   </nav>
-  <nav id="nav" class="float-right">
+  <nav id="nav" class="float-right clearfix">
     <ul>
-      <li class="current"><a href="/images">Welcome</a></li>
+      <li class="current"><a href="/images">Actions</a></li>
       <li class="submenu">
         
         <ul>
@@ -39,7 +30,11 @@
           </li>
         </ul>
       </li>
-      <li><a href="#" class="button special">Sign in</a></li>
+      <% if @current_user %>
+        <li><a href="#" class="button special">Sign out</a></li>
+      <% else %>
+        <li><a href="#" class="button special">Sign in</a></li>
+      <% end %>
     </ul>
   </nav>
 </header>

@@ -1,0 +1,18 @@
+<% if flash[:err] %>
+  <h3 class="err"><%= flash[:err] %></h3>
+<% end %>
+
+<% if flash[:ok] %>
+  <h3 class="ok"><%= flash[:ok] %></h3>
+<% end %>
+
+<% [:notice, :error, :success].each_pair do |key, value| %>
+  <section class="notif notif-<%=key%>">
+    <p><%=value%></p>
+    <div class="notif-controls">
+      <a href="index.html" class="notif-minimize">Minimize</a>
+      <a href="index.html" class="notif-zoom">Zoom</a>
+      <a href="index.html" class="notif-close">Close</a>
+    </div>
+  </section>
+<% end %>

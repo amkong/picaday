@@ -1,4 +1,14 @@
 # Homepage (Root path)
+before do
+  current_user
+end
+
+def current_user
+  if session[:id]
+    @current_user = User.find(session[:id])
+  end
+end
+
 get '/' do
   erb :index
 end
@@ -99,6 +109,8 @@ post '/login' do
   if @user
     # set session
     # redirect to homepage
+    flash[:ok] = "You have successfully logged in"
+    session[:id] = @user.id
     redirect '/'
   else
     erb :'auth/login'
