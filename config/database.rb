@@ -8,10 +8,10 @@ configure do
     adapter: 'postgresql',
     encoding: 'unicode',
     pool: 5,
-    database: ENV[DATABASE],
-    username: ENV[DB_USER_NAME],
-    password: DB_PASSWORD,
-    host:     ENV[DB_HOST],
+    database: ENV['DATABASE'],
+    username: ENV['DB_USER_NAME'],
+    password: ENV['DB_PASSWORD'],
+    host:     ENV['DB_HOST'],
     port: 5432,
     min_messages: 'error'
   )
