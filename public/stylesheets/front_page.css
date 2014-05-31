@@ -764,7 +764,6 @@
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/banner.jpg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -772,6 +771,18 @@
 		cursor: default;
 		padding: 6em 0;
 		text-align: center;
+	}
+
+	.background_main {
+		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/banner.jpg");
+	}
+
+	.background-1 {
+		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/404.jpg");
+	}
+
+	.background-sign-in {
+		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/tumblr_n5waphpp4M1st5lhmo1_1280.jpg");
 	}
 
 		#banner .inner {
@@ -829,6 +840,38 @@
 
 			#banner .inner footer {
 				margin: 2em 0 0 0;
+			}
+
+			
+
+
+			#banner#fourofour .fourofour {
+				-moz-animation: reveal-banner 1s 0.25s ease-in-out;
+				-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+				-o-animation: reveal-banner 1s 0.25s ease-in-out;
+				-ms-animation: reveal-banner 1s 0.25s ease-in-out;
+				animation: reveal-banner 1s 0.25s ease-in-out;
+				-moz-animation-fill-mode: forwards;
+				-webkit-animation-fill-mode: forwards;
+				-o-animation-fill-mode: forwards;
+				-ms-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+				background: transparent;
+				border: solid 4px;
+				color: black;
+				display: inline-block;
+				opacity: 0;
+				padding: 2em;
+				text-align: center;
+			}
+
+			#banner .fourofour h2 {
+				font-weight: 900;
+				letter-spacing: 0.2em;
+				margin: 0;
+				padding-left: 0.05em;
+				position: relative;
+				text-transform: uppercase;
 			}
 
 
@@ -917,6 +960,80 @@
 			#banner02 .inner footer {
 				margin: 2em 0 0 0;
 			}
+
+
+		#banner_sign_up {
+		background-attachment: scroll, scroll, scroll, fixed;
+		background-color: #645862;
+		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/takeaphoto.jpg");
+		background-position: bottom left, bottom right, top left, top center;
+		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+		background-size: 25em, 25em, auto, cover;
+		color: white;
+		cursor: default;
+		padding: 6em 0;
+		text-align: right;
+	}
+
+		#banner_sign_up .inner {
+			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
+			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+			-o-animation: reveal-banner 1s 0.25s ease-in-out;
+			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
+			animation: reveal-banner 1s 0.25s ease-in-out;
+			-moz-animation-fill-mode: forwards;
+			-webkit-animation-fill-mode: forwards;
+			-o-animation-fill-mode: forwards;
+			-ms-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			background: rgba(10, 8, 9, 0.6);
+			color: white;
+			display: inline-block;
+			opacity: 0;
+			padding: 3em;
+			text-align: center;
+			margin-right: 5em;
+		}
+
+		
+
+			#banner_sign_up .inner header {
+				display: inline-block;
+				border-bottom: solid 2px;
+				border-top: solid 2px;
+				margin: 0 0 2em 0;
+				padding: 3px 0 3px 0;
+			}
+
+				#banner_sign_up .inner header h2 {
+					border-bottom: solid 2px;
+					border-top: solid 2px;
+					font-size: 2.5em;
+					font-weight: 900;
+					letter-spacing: 0.2em;
+					margin: 0;
+					padding-left: 0.05em;
+					position: relative;
+					text-transform: uppercase;
+				}
+
+			#banner_sign_up .inner p {
+				letter-spacing: 0.1em;
+				margin: 0;
+				text-transform: uppercase;
+			}
+
+				#banner_sign_up .inner p a {
+					color: inherit;
+					font-weight: 400;
+					text-decoration: none;
+				}
+
+			#banner_sign_up .inner footer {
+				margin: 2em 0 0 0;
+			}
+
+		
 
 
 

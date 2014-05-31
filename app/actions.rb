@@ -48,6 +48,14 @@ post '/images/:id/upvote' do
   erb :'images/show'
 end
 
+get '/auth/sign_in' do
+  erb :'auth/sign_in'
+end
+
+get '/auth/sign_up' do
+  erb :'auth/sign_up'
+end
+
 get '/challenges' do
   @challenges = Challenge.all
 
@@ -96,8 +104,4 @@ end
 
 not_found do
   erb :'system/404'
-end
-
-def erb_special(template, layout, options={})
-  erb template, options.merge(:layout => layout)
 end
