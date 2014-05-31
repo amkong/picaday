@@ -761,279 +761,194 @@
 	@-ms-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 	@keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-	#banner {
-		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
-		background-position: bottom left, bottom right, top left, top center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
-		color: white;
-		cursor: default;
-		padding: 6em 0;
-		text-align: center;
-	}
-
-	.background_main {
-		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/banner.jpg");
-	}
-
-	.background-1 {
-		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/404.jpg");
-	}
-
-	.background-sign-in {
-		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/tumblr_n5waphpp4M1st5lhmo1_1280.jpg");
-	}
-
-		#banner .inner {
-			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
-			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-			-o-animation: reveal-banner 1s 0.25s ease-in-out;
-			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
-			animation: reveal-banner 1s 0.25s ease-in-out;
-			-moz-animation-fill-mode: forwards;
-			-webkit-animation-fill-mode: forwards;
-			-o-animation-fill-mode: forwards;
-			-ms-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			background: rgba(10, 8, 9, 0.6);
-			color: white;
-			display: inline-block;
-			opacity: 0;
-			padding: 3em;
-			text-align: center;
-		}
-
-		
-
-			#banner .inner header {
-				display: inline-block;
-				border-bottom: solid 2px;
-				border-top: solid 2px;
-				margin: 0 0 2em 0;
-				padding: 3px 0 3px 0;
-			}
-
-				#banner .inner header h2 {
-					border-bottom: solid 2px;
-					border-top: solid 2px;
-					font-size: 2.5em;
-					font-weight: 900;
-					letter-spacing: 0.2em;
-					margin: 0;
-					padding-left: 0.05em;
-					position: relative;
-					text-transform: uppercase;
-				}
-
-			#banner .inner p {
-				letter-spacing: 0.1em;
-				margin: 0;
-				text-transform: uppercase;
-			}
-
-				#banner .inner p a {
-					color: inherit;
-					font-weight: 400;
-					text-decoration: none;
-				}
-
-			#banner .inner footer {
-				margin: 2em 0 0 0;
-			}
-
-			
 
 
-			#banner#fourofour .fourofour {
-				-moz-animation: reveal-banner 1s 0.25s ease-in-out;
-				-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-				-o-animation: reveal-banner 1s 0.25s ease-in-out;
-				-ms-animation: reveal-banner 1s 0.25s ease-in-out;
-				animation: reveal-banner 1s 0.25s ease-in-out;
-				-moz-animation-fill-mode: forwards;
-				-webkit-animation-fill-mode: forwards;
-				-o-animation-fill-mode: forwards;
-				-ms-animation-fill-mode: forwards;
-				animation-fill-mode: forwards;
-				background: transparent;
-				border: solid 4px;
-				color: black;
-				display: inline-block;
-				opacity: 0;
-				padding: 2em;
-				text-align: center;
-			}
+#banner {
+    background-attachment: scroll, scroll, scroll, fixed;
+    background-color: #645862;
+    background-position: bottom left, bottom right, top left, top center;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    background-size: 25em, 25em, auto, cover;
+    cursor: default;
+  }
 
-			#banner .fourofour h2 {
-				font-weight: 900;
-				letter-spacing: 0.2em;
-				margin: 0;
-				padding-left: 0.05em;
-				position: relative;
-				text-transform: uppercase;
-			}
+#banner .inner {
+            -moz-animation: reveal-banner 1s 0.25s ease-in-out;
+            -webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+            -o-animation: reveal-banner 1s 0.25s ease-in-out;
+            -ms-animation: reveal-banner 1s 0.25s ease-in-out;
+            animation: reveal-banner 1s 0.25s ease-in-out;
+            -moz-animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            -o-animation-fill-mode: forwards;
+            -ms-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            display: inline-block;
+            opacity: 0;
+        }
 
+        
 
-			#banner02 {
-		color: white;
-		cursor: default;
-		padding: 7em 5em;
-	}
+            #banner .inner header {
+                display: inline-block;
+                border-bottom: solid 2px;
+                border-top: solid 2px;
+                margin: 0 0 2em 0;
+                padding: 3px 0 3px 0;
+            }
 
+                #banner .inner header h2 {
+                    border-bottom: solid 2px;
+                    border-top: solid 2px;
+                    font-size: 2.5em;
+                    font-weight: 900;
+                    letter-spacing: 0.2em;
+                    margin: 0;
+                    padding-left: 0.05em;
+                    position: relative;
+                    text-transform: uppercase;
+                }
 
-	#banner02 .inner {
-			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
-			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-			-o-animation: reveal-banner 1s 0.25s ease-in-out;
-			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
-			animation: reveal-banner 1s 0.25s ease-in-out;
-			-moz-animation-fill-mode: forwards;
-			-webkit-animation-fill-mode: forwards;
-			-o-animation-fill-mode: forwards;
-			-ms-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			background: rgba(10, 8, 9, 0.7);
-			color: white;
-			display: inline-block;
-			opacity: 0;
-			padding: 3em;
-			float: left;
-			text-align: center;
-		}
+            #banner .inner p {
+                letter-spacing: 0.1em;
+                margin: 0;
+                text-transform: uppercase;
+            }
 
-		#banner02 .inner.float-right {
-			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
-			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-			-o-animation: reveal-banner 1s 0.25s ease-in-out;
-			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
-			animation: reveal-banner 1s 0.25s ease-in-out;
-			-moz-animation-fill-mode: forwards;
-			-webkit-animation-fill-mode: forwards;
-			-o-animation-fill-mode: forwards;
-			-ms-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			background: rgba(10, 8, 9, 0.7);
-			color: white;
-			display: inline-block;
-			opacity: 0;
-			padding: 3em;
-			float: left;
-			margin-left: 7em;
-			width: 600px;
-			height: 600px;
-			text-align: left;
-		}
+                #banner .inner p a {
+                    color: inherit;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
 
-		#banner02 .inner header {
-				display: inline-block;
-				border-bottom: solid 2px;
-				border-top: solid 2px;
-				margin: 0 0 2em 0;
-				padding: 3px 0 3px 0;
-			}
-
-				#banner02 .inner header h2 {
-					border-bottom: solid 2px;
-					border-top: solid 2px;
-					font-size: 2.5em;
-					font-weight: 900;
-					letter-spacing: 0.2em;
-					margin: 0;
-					padding-left: 0.05em;
-					position: relative;
-					text-transform: uppercase;
-				}
-
-			#banner02 .inner p {
-				letter-spacing: 0.1em;
-				margin: 0;
-				text-transform: uppercase;
-			}
-
-				#banner02 .inner p a {
-					color: inherit;
-					font-weight: 400;
-					text-decoration: none;
-				}
-
-			#banner02 .inner footer {
-				margin: 2em 0 0 0;
-			}
+            #banner .inner footer {
+                margin: 2em 0 0 0;
+            }
 
 
-		#banner_sign_up {
-		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
-		background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/takeaphoto.jpg");
-		background-position: bottom left, bottom right, top left, top center;
-		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-		background-size: 25em, 25em, auto, cover;
-		color: white;
-		cursor: default;
-		padding: 6em 0;
-		text-align: right;
-	}
+/*  MAIN  */
+.banner_main {
+    color: white;
+    padding: 6em 0;
+    text-align: center;
+}
 
-		#banner_sign_up .inner {
-			-moz-animation: reveal-banner 1s 0.25s ease-in-out;
-			-webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-			-o-animation: reveal-banner 1s 0.25s ease-in-out;
-			-ms-animation: reveal-banner 1s 0.25s ease-in-out;
-			animation: reveal-banner 1s 0.25s ease-in-out;
-			-moz-animation-fill-mode: forwards;
-			-webkit-animation-fill-mode: forwards;
-			-o-animation-fill-mode: forwards;
-			-ms-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			background: rgba(10, 8, 9, 0.6);
-			color: white;
-			display: inline-block;
-			opacity: 0;
-			padding: 3em;
-			text-align: center;
-			margin-right: 5em;
-		}
+    .background_main {
+        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/banner.jpg");
+    }
 
-		
+        .banner_main .inner {
+            background: rgba(10, 8, 9, 0.6);
+            color: white;
+            padding: 3em;
+            text-align: center;
+        }
 
-			#banner_sign_up .inner header {
-				display: inline-block;
-				border-bottom: solid 2px;
-				border-top: solid 2px;
-				margin: 0 0 2em 0;
-				padding: 3px 0 3px 0;
-			}
+/*   CHALLENGE/TODAY   */
+.banner_today {  
+    color: white;
+    padding: 7em 5em;
+    text-align: center;
+}
 
-				#banner_sign_up .inner header h2 {
-					border-bottom: solid 2px;
-					border-top: solid 2px;
-					font-size: 2.5em;
-					font-weight: 900;
-					letter-spacing: 0.2em;
-					margin: 0;
-					padding-left: 0.05em;
-					position: relative;
-					text-transform: uppercase;
-				}
+    .background_today {
+        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/tumblr_mvlo8zqMLr1sdyj9lo1_1280.jpg.jpg");
+    }
 
-			#banner_sign_up .inner p {
-				letter-spacing: 0.1em;
-				margin: 0;
-				text-transform: uppercase;
-			}
+        .banner_today .inner {  
+            background: rgba(10, 8, 9, 0.7);
+            color: white;
+            padding: 3em;
+            float: left;
+            text-align: center;
+        }
 
-				#banner_sign_up .inner p a {
-					color: inherit;
-					font-weight: 400;
-					text-decoration: none;
-				}
+            .banner_today .inner.float-right {  
+                background: rgba(10, 8, 9, 0.7);
+                color: white;
+                padding: 3em;
+                float: left;
+                margin-left: 7em;
+                width: 600px;
+                height: 600px;
+                text-align: left;
+            }
 
-			#banner_sign_up .inner footer {
-				margin: 2em 0 0 0;
-			}
 
-		
+
+
+
+/*      SIGN UP PAGE    */
+.banner_sign_up {
+    color: white;
+    padding: 6em 0;
+    text-align: right;
+}
+
+    .background_sign_up {
+        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/takeaphoto.jpg");
+        }
+
+        .banner_sign_up .inner {
+            background: rgba(10, 8, 9, 0.6);
+            color: white;
+            padding: 3em;
+            text-align: center;
+            margin-right: 5em;
+        }
+
+
+
+
+/*  SIGN IN PAGE  */
+.banner_sign_in {
+    color: white;
+    padding: 6em 0;
+    text-align: center;
+}
+
+    .background_sign_in {
+        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/tumblr_n5waphpp4M1st5lhmo1_1280.jpg");
+    }
+
+        .banner_sign_in .inner {
+            background: rgba(10, 8, 9, 0.6);
+            color: white;
+            padding: 3em;
+            text-align: center;
+        }
+
+
+
+
+/*  404  */
+.banner_404 {
+    color: white;
+    padding: 6em 0;
+    text-align: center;
+}
+
+    .background_404 {
+        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/404.jpg");
+    }
+
+        .banner_404 .inner {
+            background: transparent;
+            border: solid 4px;
+            color: black;
+            padding: 2em;
+            text-align: center;
+        }
+
+            .banner_404 h2 {
+                font-weight: 900;
+                letter-spacing: 0.2em;
+                margin: 0;
+                padding-left: 0.05em;
+                position: relative;
+                text-transform: uppercase;
+            }
+
 
 
 
