@@ -14,6 +14,7 @@ gem 'tux'
 gem 'bcrypt-ruby', '~> 3.1.5', require: 'bcrypt' 
 gem 'warden'
 gem 'omniauth'
+gem 'pg'
 
 group :development, :test do
   gem 'pry'

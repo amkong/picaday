@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20140530180233) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "challenges", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.time     "date"
+    t.datetime "date"
   end
 
   create_table "challenges_images", id: false, force: true do |t|
@@ -24,12 +27,19 @@ ActiveRecord::Schema.define(version: 20140530180233) do
     t.integer "image_id",     null: false
   end
 
-# Could not dump table "images" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "images", force: true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "challenge_id"
+  end
 
   create_table "users", force: true do |t|
-    t.string "email",                           null: false
-    t.string "encrypted_password", default: "", null: false
+    t.string   "email",                           null: false
+    t.string   "encrypted_password", default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "votes", force: true do |t|
