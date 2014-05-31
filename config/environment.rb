@@ -29,7 +29,7 @@ configure do
   set :server, :puma
 
   enable :sessions
-  set :session_secret, ENV['SESSION_KEY'] || 'lighthouselabssecret'
+  set :session_secret, ENV['SESSION_KEY']
 
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
