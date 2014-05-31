@@ -11,7 +11,7 @@ gem 'sinatra-flash'
 
 gem 'puma'
 gem 'tux'
-gem 'bcrypt-ruby', '~> 3.1.5'
+gem 'bcrypt-ruby', '~> 3.1.5', require: 'bcrypt' 
 gem 'warden'
 
 group :development, :test do

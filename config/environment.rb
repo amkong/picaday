@@ -68,7 +68,6 @@ Warden::Strategies.add(:password) do
   end
 end
 
-
 # use Rack::Flash, accessorize: [:error, :success]
 # Set up the database and models
 require APP_ROOT.join('config', 'database')

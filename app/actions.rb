@@ -88,6 +88,16 @@ get '/challenges/:id' do
   erb :'challenges/show'
 end
 
+post '/login' do
+  @user = User.authenticate(params[:email], params[:password])
+
+  if @user
+    #set session
+  else
+    render :'auth/login'
+  end
+end
+
 helpers do
   def current_challenge
     @current_challenge = Challenge.today
