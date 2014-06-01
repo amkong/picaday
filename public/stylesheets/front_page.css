@@ -135,6 +135,7 @@
 		padding-top: 7em;
 		position: relative;
 		text-align: center;
+		margin-top: 4em;
 	}
 
 		header.special:before, header.special:after {
@@ -544,7 +545,7 @@
 
 #banner {
     background-attachment: scroll, scroll, scroll, fixed;
-    background-color: #645862;
+    /*background-color: #645862;*/
     background-position: bottom left, bottom right, top left, top center;
     background-repeat: no-repeat, no-repeat, repeat, no-repeat;
     background-size: 25em, 25em, auto, cover;
@@ -630,9 +631,9 @@
     text-align: center;
 }
 
-    .background_today {
+    /*.background_today {
         background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/tumblr_mvlo8zqMLr1sdyj9lo1_1280.jpg.jpg");
-    }
+    }*/
 
         .banner_today .inner {  
             background: rgba(10, 8, 9, 0.7);
@@ -687,7 +688,7 @@
 }
 
     .background_sign_in {
-        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/tumblr_n5waphpp4M1st5lhmo1_1280.jpg");
+        background-image: url("../images/light-bl.svg"), url("../images/light-br.svg"), url("../images/overlay.png"), url("../images/aged_wood.jpg");
     }
 
         .banner_sign_in .inner {
