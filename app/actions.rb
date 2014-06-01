@@ -85,11 +85,17 @@ end
 
 get '/challenges/:year/:month/:day' do
   @challenge = Challenge.find_by(date: Date.parse("#{params[:year]}-#{params[:month]}-#{params[:day]}"))
-  @images = @challenge.images
-  @images = @images.sort do |a,b|
-     b.votes.size <=> a.votes.size
+  
+  if @challenge
+    @images = @challenge.images
+    @images = @images.sort do |a,b|
+      b.votes.size <=> a.votes.size
+    end
+    erb :'challenges/show'
   end
-  erb :'challenges/show'
+
+  status 404
+  erb :'system/404'
 end
 
 get '/challenges/:id' do
