@@ -7,6 +7,7 @@
     <div class="gamma-container gamma-loading" id="gamma-container">
 
       <ul class="gamma-gallery">
+      <% if @images %>
         <% @images.each do |image| %>
         <li>
           <div data-alt="img<%=image.id%>" data-description="<h3><%=image.title%></h3>" data-max-width="1800" data-max-height="1350">
@@ -14,6 +15,7 @@
           </div>
         </li>
         <% end %>
+      <% end %>
       </ul>
 
       <div class="gamma-overlay"></div>
