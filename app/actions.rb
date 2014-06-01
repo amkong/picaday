@@ -1,4 +1,14 @@
 # Homepage (Root path)
+before do
+  current_user
+end
+
+def current_user
+  if session[:id]
+    @current_user = User.find(session[:id])
+  end
+end
+
 get '/' do
   erb :index
 end
@@ -78,19 +88,39 @@ get '/challenges/:year/:month/:day' do
   
   if @challenge
     @images = @challenge.images
-
     @images = @images.sort do |a,b|
       b.votes.size <=> a.votes.size
-    end 
-  end 
-    
-  erb :'challenges/show'
+    end
+    erb :'challenges/show'
+  end
+
+  status 404
+  erb :'system/404'
 end
 
 get '/challenges/:id' do
   @challenge = Challenge.find(params[:id])
   @images = @challenge.images
   erb :'challenges/show'
+end
+
+get '/login' do
+  @user = User.new
+
+  erb :'auth/login'
+end
+post '/login' do
+  @user = User.authenticate(params[:email], params[:password])
+
+  if @user
+    # set session
+    # redirect to homepage
+    flash[:ok] = "You have successfully logged in"
+    session[:id] = @user.id
+    redirect '/'
+  else
+    erb :'auth/login'
+  end
 end
 
 helpers do
@@ -103,6 +133,25 @@ not_found do
   erb :'system/404'
 end
 
-def erb_special(template, layout, options={})
-  erb template, options.merge(:layout => layout)
+# Warden routes
+
+# when user reach a protected route watched by Warden calls
+post '/auth/unauthenticated' do
+  session[:return_to] = env['warden.options'][:attempted_path]
+  puts env['warden.options'][:attempted_path]
+  flash[:error] = env['warden'].message  || 'You must to login to continue'
+  redirect '/auth/login'
+end
+
+# to ensure user logout a session data removal
+get '/logout' do
+  env['warden'].raw_session.inspect
+  env['warden'].logout
+  flash[:success] = "Successfully logged out"
+  redirect '/'
+end
+
+get '/protected' do
+  env['warden'].authenticate!
+  erb :'auth/protected'
 end
