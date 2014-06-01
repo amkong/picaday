@@ -17,8 +17,8 @@ require 'bcrypt'
 # require 'dotenv'
 # Dotenv.load
 
-# require_relative '../lib/image_importer'
-# require_relative '../lib/challenge_importer'
+require_relative '../lib/image_importer'
+require_relative '../lib/challenge_importer'
 
 # use Rack::Session::Cookie, secret: "IdoNotHaveAnySecret"
 # use Rack::Flash, accessorize: [:error, :success]
