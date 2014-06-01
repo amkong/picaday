@@ -40,30 +40,27 @@
 </header>
 
 <!-- Banner -->   
-  <section id="banner">
+<section id="banner" class="banner_main background_main">
+  
+  <!--
+    ".inner" is set up as an inline-block so it automatically expands
+    in both directions to fit whatever's inside it. This means it won't
+    automatically wrap lines, so be sure to use line breaks where
+    appropriate (<br />).
+  -->
+  <div class="inner">
     
-    <!--
-      ".inner" is set up as an inline-block so it automatically expands
-      in both directions to fit whatever's inside it. This means it won't
-      automatically wrap lines, so be sure to use line breaks where
-      appropriate (<br />).
-    -->
-    <div class="inner">
-      
-      <header>
-        <h2>PICADAY</h2>
-      </header>
-      <p>This is <strong>Picaday</strong>, a free<br />
-      photography challenge<br />
-      every day.</p>
-      <footer>
-        <ul class="buttons vertical">
-          <li><a href="/challenges/today" class="button fit scrolly">Challenge Me</a></li>
-        </ul>
-      </footer>
-    </div>
+    <header>
+      <h2>PICADAY</h2>
+    </header>
+    <p>This is <strong>Picaday</strong>, a free<br />
+    photography challenge<br />
+    every day.</p>
+    <footer>
+      <ul class="buttons vertical">
+        <li><a href="/challenges/today" class="button fit scrolly">Challenge Me</a></li>
+      </ul>
+    </footer>
+  </div>
 
-  </section>
-    
-
-
+</section>

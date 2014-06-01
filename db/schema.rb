@@ -42,6 +42,11 @@ ActiveRecord::Schema.define(version: 20140530180233) do
     t.datetime "updated_at"
   end
 
+  create_table "users", force: true do |t|
+    t.string "email",                           null: false
+    t.string "encrypted_password", default: "", null: false
+  end
+
   create_table "votes", force: true do |t|
     t.integer  "image_id"
     t.datetime "created_at"

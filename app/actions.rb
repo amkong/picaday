@@ -58,6 +58,14 @@ post '/images/:id/upvote' do
   erb :'images/show'
 end
 
+get '/auth/sign_in' do
+  erb :'auth/sign_in'
+end
+
+get '/auth/sign_up' do
+  erb :'auth/sign_up'
+end
+
 get '/challenges' do
   @challenges = Challenge.all
 
@@ -155,3 +163,4 @@ get '/protected' do
   env['warden'].authenticate!
   erb :'auth/protected'
 end
+
