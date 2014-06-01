@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Gamma Gallery - A Responsive Image Gallery Experiment</title>
+        <meta name="description" content="Gamma Gallery - A Responsive Image Gallery Experiment"/>
+        <meta name="keywords" content="html5, responsive, image gallery, masonry, picture, images, sizes, fluid, history api, visibility api"/>
+        <meta name="author" content="Codrops"/>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="stylesheets/vanilla.css"/>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+        <link rel="stylesheet" type="text/css" href="stylesheets/front_page.css"/>
+        <link rel="stylesheet" type="text/css" href="stylesheets/application.css"/>
+        <script src="javascript/modernizr.custom.70736.js"></script>
+    </head>
+    <body>
+
+        <!-- Header -->
+      <header id="header" class="clearfix">
+        <nav id="nav" class="float-left clearfix">
+          <ul>
+            <li class="current"><a href="/images" class="home-page-link">PICAday</a></li>
+            <li><a href="#" class="button special background-color-1">Sign up</a></li>
+          </ul>
+        </nav>
+        <nav id="nav" class="float-right clearfix">
+          <ul>
+            <li class="current"><a href="/images">Welcome</a></li>
+            <li class="submenu">
+              
+              <ul>
+                <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                <li><a href="no-sidebar.html">No Sidebar</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="submenu">
+                  <a href="">Submenu</a>
+                  <ul>
+                    <li><a href="#">Dolore Sed</a></li>
+                    <li><a href="#">Consequat</a></li>
+                    <li><a href="#">Lorem Magna</a></li>
+                    <li><a href="#">Sed Magna</a></li>
+                    <li><a href="#">Ipsum Nisl</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#" class="button special">Sign in</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+        <%= yield %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="javascript/jquery.masonry.min.js"></script>
+    <script src="javascript/jquery.history.js"></script>
+    <script src="javascript/js-url.min.js"></script>
+    <script src="javascript/jquerypp.custom.js"></script>
+    <script src="javascript/gamma.js"></script>
+    <script type="text/javascript">
+      $('.challenges-masonry').masonry({
+        itemSelector: '.challenge-list-item',
+      });
+      
+    </script> 
+  </body>
+</html>

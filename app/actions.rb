@@ -69,7 +69,7 @@ end
 get '/challenges' do
   @challenges = Challenge.all
 
-  erb :'challenges/index'
+  erb :'challenges/index', layout: :'layouts/challenges'
 end
 
 get '/challenges/today' do
