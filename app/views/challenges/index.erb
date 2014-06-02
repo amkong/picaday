@@ -1,57 +1,22 @@
-<header id="header" class="alt">
-  <nav id="nav" class="float-left">
-    <ul>
-      <li class="current"><a href="/">Picaday</a></li>
-      <li><a href="/auth/sign_up" class="button special">Sign up</a></li>
-    </ul>
-  </nav>
-  <nav id="nav" class="float-right">
-    <ul>
-      <li class="current"><a href="/images">Welcome</a></li>
-      <li class="submenu">
-        
-        <ul>
-          <li><a href="left-sidebar.html">Left Sidebar</a></li>
-          <li><a href="right-sidebar.html">Right Sidebar</a></li>
-          <li><a href="no-sidebar.html">No Sidebar</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="submenu">
-            <a href="">Submenu</a>
-            <ul>
-              <li><a href="#">Dolore Sed</a></li>
-              <li><a href="#">Consequat</a></li>
-              <li><a href="#">Lorem Magna</a></li>
-              <li><a href="#">Sed Magna</a></li>
-              <li><a href="#">Ipsum Nisl</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="/auth/sign_in" class="button special">Sign in</a></li>
-    </ul>
-  </nav>
-</header>
-
-
 <section class="wrapper style2 container special-alt">
   <div class="row half">
     <div class="8u">
     <header>
         <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
-      </header>
-      <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-
+    </header>
+      
+   <div class="challenges-masonry clearfix">
       <% @challenges.each do |challenge| %>
         <div class="challenge-list-item">
-          <a href="/challenges/<%=challenge.id%>">
-          <div class="challenge-list-item">
-            <p><%=challenge.name%></p>
-            <date><%=challenge.date%></date>
-          </div>
+        <div class="challenge-list-item-container">
+          <a href="/challenges/<%=challenge.id%>" class="block border-none">
+            <h2 class="small-heading"><%=challenge.name%></h2>
           </a>
         </div>
+        </div>
       <% end %>
-      
+      </div>
     </div>
   </div>
 </section>
+
