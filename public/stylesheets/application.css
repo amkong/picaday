@@ -29,3 +29,21 @@
 .float-right {
   float: right;
 }
+
+.background-color-1 {
+  background-color: rgba(45, 231, 135, 0.9);
+}
+
+.button.special.background-color-1 {
+  background-color: rgba(45, 231, 135, 0.9);
+}
+
+.center-text {
+  text-align: center;
+}
+
+header.special h1.center-text {
+  text-align: center;
+  float: none;
+  display: inline-block;
+}

@@ -504,6 +504,10 @@
 					background: rgba(188, 202, 206, 0.15);
 				}
 
+				#header nav ul li:hover > a.home-page-link {
+					
+				}
+
 				#header nav ul li.current > a {
 					font-weight: 900;
 				}

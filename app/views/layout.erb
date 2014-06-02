@@ -23,45 +23,52 @@
 </head>
 <body>
 
+<!-- Header -->
+<header id="header" class="alt">
+  <nav id="nav" class="float-left clearfix">
+    <ul>
+      <li class="current"><a href="/">Picaday</a></li>
+      <%if @current_user.nil? %>
+        <li><a href="/auth/sign_up" class="button special">Sign up</a></li>
+      <% end %>
+    </ul>
+  </nav>
+  <nav id="nav" class="float-right clearfix">
+    <ul>
+      <li class="current"><a href="/images">Actions</a></li>
+      <li class="submenu">
+        
+        <ul>
+          <li><a href="left-sidebar.html">Left Sidebar</a></li>
+          <li><a href="right-sidebar.html">Right Sidebar</a></li>
+          <li><a href="no-sidebar.html">No Sidebar</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="submenu">
+            <a href="">Submenu</a>
+            <ul>
+              <li><a href="#">Dolore Sed</a></li>
+              <li><a href="#">Consequat</a></li>
+              <li><a href="#">Lorem Magna</a></li>
+              <li><a href="#">Sed Magna</a></li>
+              <li><a href="#">Ipsum Nisl</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <% if @current_user %>
+        <li><a href="/logout" class="button special">Sign out</a></li>
+      <% else %>
+        <li><a href="/auth/sign_in" class="button special">Sign in</a></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
+
+
   <%= yield %>
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/javascript/application.js"></script>
-  <script src="/javascript/jquery.masonry.min.js"></script>
-  <script src="/javascript/jquery.history.js"></script>
-  <script src="/javascript/js-url.min.js"></script>
-  <script src="/javascript/jquerypp.custom.js"></script>
-  <script src="/javascript/gamma.js"></script>
-  <script type="text/javascript">
-
-  
-  $(function() {
-
-    var GammaSettings = {
-        // order is important!
-        viewport : [ {
-          width : 1200,
-          columns : 5
-        }, {
-          width : 900,
-          columns : 4
-        }, {
-          width : 500,
-          columns : 3
-        }, { 
-          width : 320,
-          columns : 2
-        }, { 
-          width : 0,
-          columns : 2
-        } ]
-    };
-
-    Gamma.init(GammaSettings);
-
-  });
-
-</script> 
+  <script src="/javascript/application.js"></script> 
 </body>
 
 
