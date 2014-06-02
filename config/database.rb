@@ -5,15 +5,8 @@ configure do
   end
 
   ActiveRecord::Base.establish_connection(
-    adapter: 'postgresql',
-    encoding: 'unicode',
-    pool: 5,
-    database: ENV['DATABASE'],
-    username: ENV['DB_USER_NAME'],
-    password: ENV['DB_PASSWORD'],
-    host:     ENV['DB_HOST'],
-    port: 5432,
-    min_messages: 'error'
+    :adapter => "sqlite3",
+    :database => "db/db.sqlite3"
   )
 
   # Load all models from app/models, using autoload instead of require
