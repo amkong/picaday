@@ -23,9 +23,10 @@
 </head>
 <body>
 
-<!-- Header -->
+
+ <!-- Header -->
 <header id="header" class="alt">
-  <nav id="nav" class="float-left clearfix">
+  <nav id="nav-left" class="float-left clearfix">
     <ul>
       <li class="current"><a href="/">Picaday</a></li>
       <%if @current_user.nil? %>
@@ -35,24 +36,23 @@
   </nav>
   <nav id="nav" class="float-right clearfix">
     <ul>
-      <li class="current"><a href="/images">Actions</a></li>
       <li class="submenu">
-        
+        <a href>Actions</a>
         <ul>
-          <li><a href="left-sidebar.html">Left Sidebar</a></li>
-          <li><a href="right-sidebar.html">Right Sidebar</a></li>
-          <li><a href="no-sidebar.html">No Sidebar</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="submenu">
-            <a href="">Submenu</a>
-            <ul>
-              <li><a href="#">Dolore Sed</a></li>
-              <li><a href="#">Consequat</a></li>
-              <li><a href="#">Lorem Magna</a></li>
-              <li><a href="#">Sed Magna</a></li>
-              <li><a href="#">Ipsum Nisl</a></li>
-            </ul>
-          </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/challenges/today">Today</a></li>
+            <li><a href="/images">Images</a></li>
+            <li><a href="/challenges">Challenges</a></li>
+            <li class="submenu">
+              <a href="">Submenu</a>
+              <ul>
+                <li><a href="#">Dolore Sed</a></li>
+                <li><a href="#">Consequat</a></li>
+                <li><a href="#">Lorem Magna</a></li>
+                <li><a href="#">Sed Magna</a></li>
+                <li><a href="#">Ipsum Nisl</a></li>
+              </ul>
+            </li>
         </ul>
       </li>
       <% if @current_user %>
@@ -68,6 +68,10 @@
   <%= yield %>
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascript/skel.min.js"></script> 
+  <script src="/javascript/skel-layers.js"></script> 
+  <script src="/javascript/dropotron.js"></script> 
+  <script src="/javascript/init.js"></script> 
   <script src="/javascript/application.js"></script> 
 </body>
 

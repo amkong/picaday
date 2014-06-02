@@ -17,40 +17,45 @@
     </head>
     <body>
 
-        <!-- Header -->
-      <header id="header" class="clearfix">
-        <nav id="nav" class="float-left clearfix">
-          <ul>
-            <li class="current"><a href="/images" class="home-page-link">PICAday</a></li>
-            <li><a href="#" class="button special background-color-1">Sign up</a></li>
-          </ul>
-        </nav>
-        <nav id="nav" class="float-right clearfix">
-          <ul>
-            <li class="current"><a href="/images">Welcome</a></li>
+ <!-- Header -->
+<header id="header" class="alt">
+  <nav id="nav-left" class="float-left clearfix">
+    <ul>
+      <li class="current"><a href="/">Picaday</a></li>
+      <%if @current_user.nil? %>
+        <li><a href="/auth/sign_up" class="button special">Sign up</a></li>
+      <% end %>
+    </ul>
+  </nav>
+  <nav id="nav" class="float-right clearfix">
+    <ul>
+      <li class="submenu">
+        <a href>Actions</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/challenges/today">Today</a></li>
+            <li><a href="/images">Images</a></li>
+            <li><a href="/challenges">Challenges</a></li>
             <li class="submenu">
-              
+              <a href="">Submenu</a>
               <ul>
-                <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                <li><a href="no-sidebar.html">No Sidebar</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="submenu">
-                  <a href="">Submenu</a>
-                  <ul>
-                    <li><a href="#">Dolore Sed</a></li>
-                    <li><a href="#">Consequat</a></li>
-                    <li><a href="#">Lorem Magna</a></li>
-                    <li><a href="#">Sed Magna</a></li>
-                    <li><a href="#">Ipsum Nisl</a></li>
-                  </ul>
-                </li>
+                <li><a href="#">Dolore Sed</a></li>
+                <li><a href="#">Consequat</a></li>
+                <li><a href="#">Lorem Magna</a></li>
+                <li><a href="#">Sed Magna</a></li>
+                <li><a href="#">Ipsum Nisl</a></li>
               </ul>
             </li>
-            <li><a href="#" class="button special">Sign in</a></li>
-          </ul>
-        </nav>
-      </header>
+        </ul>
+      </li>
+      <% if @current_user %>
+        <li><a href="/logout" class="button special">Sign out</a></li>
+      <% else %>
+        <li><a href="/auth/sign_in" class="button special">Sign in</a></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
 
 
         <%= yield %>
